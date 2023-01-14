@@ -11,19 +11,17 @@
 </p>
 
 <h1 align="center">    
-  <img src="https://github.com/BoltzmannEntropy/QMLDocker/blob/main/resources/HXH.png?raw=true" width="50%"></a>  
+  <img src="https://github.com/BoltzmannEntropy/QMLDocker/blob/main/resources/HXH.png?raw=true" width="40%"></a>  
 </h1>
----
 
 ## About
-
 In comparison to many specialists, I am relatively new to the field of quantum computing, having only begun my journey in 2019. 
 My interest in the subject was sparked by its potential and the difficulty in understanding it. 
 I was also frustrated by the amount of misinformation being reported in the media about vendor announcements. 
 To gain a deeper understanding of the field, I decided to enroll in a graduate program (JHU) where I would combine my knowledge of AI with applied physics, quantum mechanics, and quantum computing. 
 The need for this container arose from my desire to have a single environment for my QML work on all platforms. 
 
-I encountered challenges when trying to install the deep learning library paddlepaddle and its quantum extension paddle-quantum on a Mac with the new M1 chip, but ultimately succeeded in creating an Ubuntu-based docker that works with both on the M1 chip.
+I encountered challenges when trying to install the deep learning library paddlepaddle, Qiskit and its quantum extension paddle-quantum on a Mac with the new M1 chip, but ultimately succeeded in creating an Ubuntu-based docker that works with both on the M1 chip.
 
 <table>
 <tr>
