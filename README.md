@@ -1,4 +1,4 @@
-<h1 align="center">QuanDocker: A docker container for quantum machine learning (QML) research.</h1>
+<h1 align="center">QuanDocker: A docker container for quantum machine learning (QML) research (work in progress).</h1>
       
 <p align="center">
   <a href="#about">About</a> •
@@ -10,7 +10,7 @@
 </p>
 
 <h1 align="center">    
-  <img src="https://github.com/BoltzmannEntropy/QMLDocker/blob/main/resources/HXH.png?raw=true" width="40%"></a>  
+  <img src="https://github.com/BoltzmannEntropy/QMLDocker/blob/main/resources/HXH.png?raw=true" width="30%"></a>  
 </h1>
 
 ## About
@@ -20,7 +20,7 @@ I was also frustrated by the amount of misinformation being reported in the medi
 To gain a deeper understanding of the field, I decided to enroll in a graduate program (JHU) where I would combine my knowledge of AI with applied physics, quantum mechanics, and quantum computing. 
 The need for this container arose from my desire to have a single environment for my QML work on all platforms. 
 
-I encountered challenges when trying to install the deep learning library paddlepaddle, Qiskit and its quantum extension paddle-quantum on a Mac with the new M1 chip, but ultimately succeeded in creating an Ubuntu-based docker that works with both on the M1 chip.
+I encountered challenges when trying to install the deep learning libraries Qiskit, paddlepaddle and its quantum extension paddle-quantum on a Mac with the new M1 chip, but ultimately succeeded in creating an Ubuntu-based docker that works with both on the M1 chip.
 
 
 # Quantum computing libraries
