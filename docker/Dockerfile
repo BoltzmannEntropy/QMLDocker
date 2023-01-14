@@ -104,11 +104,10 @@ RUN python3.8 -m pip install -U qiskit cirq qibo git+https://github.com/aspuru-g
 # see python -m pip install paddlepaddle==2.4.1 -i https://pypi.tuna.tsinghua.edu.cn/simple
 # see https://stackoverflow.com/questions/74319979/how-to-install-paddlepaddle-with-no-avx-core
 RUN python3.8 -m pip download paddlepaddle==2.3.0 -f https://www.paddlepaddle.org.cn/whl/linux/mkl/noavx/stable.html --no-index --no-deps
-RUN #python3.8 -m pip install paddlepaddle==2.4.1 -i https://pypi.tuna.tsinghua.edu.cn/simple paddle-quantum
 RUN python3.8 -m pip install paddlepaddle-2.3.0-cp38-cp38-linux_x86_64.whl paddle-quantum==2.2.2
-RUN #python3.8 -m pip install -U cirq qiskit qibo azure-quantum[qiskit]
-
-RUN
+#RUN python3.8 -m pip install "opencv-python-headless<4.3"
+RUN python3.8 -m pip install opencv-contrib-python==4.5.5.62 pillow==9.1.0
+RUN apt-get install -y libx11-dev ffmpeg libsm6 libxext6 libgl1
 
 RUN apt-get update \
     && apt-get install -y openssh-server xauth \
