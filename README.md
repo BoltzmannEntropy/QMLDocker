@@ -23,13 +23,30 @@ The need for this container arose from my desire to have a single environment fo
 I encountered challenges when trying to install the deep learning libraries Qiskit, paddlepaddle and its quantum extension paddle-quantum on a Mac with the new M1 chip, but ultimately succeeded in creating an Ubuntu-based docker that works with both on the M1 chip.
 
 
-# Quantum computing libraries
+# Quantum computing libraries, features etc 
 <h1 align="center">    
   <img src="https://github.com/BoltzmannEntropy/QMLDocker/blob/main/resources/logo.png?raw=true" width="30%"></a>  
 </h1>
 
+ - PyTorch 
+ - Qiskit
+ - cirq 
+ - Paddlepaddle
+ - Paddle-quantum 
+ - A passord protected Jupyter (password is:"mk2==2km") 
+ - An SSH key that is embedded into teh docker (change it of you want)
+ - Home directory /home/qmuser 
+# Building
+```bash
+docker build -t quantdoc docker
+```
+
 
 # Running
+
+```bash
+docker run  --platform linux/amd64 -it --env="DISPLAY" -p 8097:7842 -v /tmp/.X11-unix:/tmp/.X11-unix:rw -e DISPLAY -e XAUTHORITY -v /Users/sol/dev/:/home/qmuser/sharedfolder  quantdoc:latest bash
+```
 
 ```bash
 sol@mprox QMLDocker % ./run.sh  
