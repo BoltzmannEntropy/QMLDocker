@@ -93,24 +93,6 @@ WORKDIR /
 
 RUN apt-get install -y --no-install-recommends libcairo2 texlive-xetex texlive-fonts-recommended texlive-plain-generic
 
-#QUANTUM
-#RUN apt-get install -y apt-transport-https curl gnupg \
-#RUN wget https://github.com/bazelbuild/bazel/releases/download/3.7.2/bazel-3.7.2-linux-arm64 && chmod +x ./bazel-3.7.2-linux-arm64
-#RUN cp ./bazel-3.7.2-linux-arm64 /usr/local/bin/bazel
-#WORKDIR /
-# A fix for OSX m1 chip
-#RUN python3 -m pip download paddlepaddle==2.3.2 -f https://www.paddlepaddle.org.cn/whl/linux/openblas/avx/stable.html --no-index --no-deps
-RUN python3.8 -m pip install -U qiskit cirq qibo git+https://github.com/aspuru-guzik-group/tequila.git azure-quantum[qiskit]
-# see python -m pip install paddlepaddle==2.4.1 -i https://pypi.tuna.tsinghua.edu.cn/simple
-# see https://stackoverflow.com/questions/74319979/how-to-install-paddlepaddle-with-no-avx-core
-RUN python3.8 -m pip download paddlepaddle==2.3.0 -f https://www.paddlepaddle.org.cn/whl/linux/mkl/noavx/stable.html --no-index --no-deps
-RUN python3.8 -m pip install paddlepaddle-2.3.0-cp38-cp38-linux_x86_64.whl paddle-quantum==2.2.2
-#RUN python3.8 -m pip install "opencv-python-headless<4.3"
-
-RUN apt-get install -y libx11-dev ffmpeg libsm6 libxext6 libgl1 python3-opencv
-RUN python3.8 -m pip install opencv-contrib-python==4.5.5.62 pillow==9.1.0
-
-
 RUN apt-get update \
     && apt-get install -y openssh-server xauth \
     && mkdir /var/run/sshd \
@@ -127,13 +109,27 @@ RUN apt-get update \
 
 
 RUN echo "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDXzdf8v1f/R/DWV1UpJF/yxSessUC44kueQgs8fceWEncC3gUC174S7YfCff8Oas1lfCVFCJJZdmbSEExuw+YaLxyJ633RIHtAgAP+TJzl90UBys9iPxL66I4r7SzOXd3oYgyonUfMLADIWYAjkErvx4N8UHPNNe1yC8jBtT+7LDNZL4dVZ4iodfs8gQfSxN5UuPkIb04ali6chfvx3PADrfFWC8meYPfDxAqiz4h9U7DywgoXwMwWAc4J9Tbbg7Jztjz0xCWlrUjiif5hXbKcgDKv5fltwYVIPA2XU+I+zS3reegYWWiHxfpGf2V1Ym6sGIhJNsccjlLzEKq57gg1 dambo" >> /root/.ssh/authorized_keys
-
-
 RUN echo 'ldconfig'  >> /root/.bashrc
 # RUN source /root/.bashrc
-
 RUN echo "export PATH=$PATH" >> /etc/profile && \
     echo "ldconfig" >> /etc/profile
+
+#QUANTUM
+#RUN apt-get install -y apt-transport-https curl gnupg \
+#RUN wget https://github.com/bazelbuild/bazel/releases/download/3.7.2/bazel-3.7.2-linux-arm64 && chmod +x ./bazel-3.7.2-linux-arm64
+#RUN cp ./bazel-3.7.2-linux-arm64 /usr/local/bin/bazel
+#WORKDIR /
+# A fix for OSX m1 chip
+#RUN python3 -m pip download paddlepaddle==2.3.2 -f https://www.paddlepaddle.org.cn/whl/linux/openblas/avx/stable.html --no-index --no-deps
+RUN python3.8 -m pip install -U qiskit cirq qibo git+https://github.com/aspuru-guzik-group/tequila.git azure-quantum[qiskit]
+# see python -m pip install paddlepaddle==2.4.1 -i https://pypi.tuna.tsinghua.edu.cn/simple
+# see https://stackoverflow.com/questions/74319979/how-to-install-paddlepaddle-with-no-avx-core
+RUN python3.8 -m pip download paddlepaddle==2.3.0 -f https://www.paddlepaddle.org.cn/whl/linux/mkl/noavx/stable.html --no-index --no-deps
+RUN python3.8 -m pip install paddlepaddle-2.3.0-cp38-cp38-linux_x86_64.whl paddle-quantum==2.2.2
+#RUN python3.8 -m pip install "opencv-python-headless<4.3"
+
+RUN apt-get install -y libx11-dev ffmpeg libsm6 libxext6 libgl1 python3-opencv
+RUN python3.8 -m pip install opencv-python opencv-contrib-python==4.5.5.62 pillow==9.1.0
 
 USER root
 RUN chown qmuser /home/qmuser/
