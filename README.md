@@ -23,13 +23,12 @@ The need for this container arose from my desire to have a single environment fo
 
 I encountered challenges when trying to install the deep learning library paddlepaddle, Qiskit and its quantum extension paddle-quantum on a Mac with the new M1 chip, but ultimately succeeded in creating an Ubuntu-based docker that works with both on the M1 chip.
 
+
+# Quantum computing libraries
+
 <table>
 <tr>
 <td>
-
-## What can it do for me? 
-
-# Quantum computing libraries
 
 <h1 align="center">    
   <img src="https://github.com/BoltzmannEntropy/QMLDocker/blob/main/resources/logo.png?raw=true" width="40%"></a>  
@@ -44,7 +43,6 @@ I encountered challenges when trying to install the deep learning library paddle
    </tr>
  </table>
  </div>
-
 
 # Running
 
