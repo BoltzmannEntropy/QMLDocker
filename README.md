@@ -1,3 +1,6 @@
+<table>
+<tr>
+<td>
 
 <h1 align="center">QuanDocker: A docker container for quantum machine learning (QML) research.</h1>
       
@@ -25,14 +28,11 @@ I encountered challenges when trying to install the deep learning library paddle
 
 
 # Quantum computing libraries
-
-<table>
-<tr>
-<td>
-
 <h1 align="center">    
   <img src="https://github.com/BoltzmannEntropy/QMLDocker/blob/main/resources/logo.png?raw=true" width="40%"></a>  
 </h1>
+
+
  <div align='center'>
  <table>
     <th>Library</th> 
