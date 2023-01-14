@@ -92,7 +92,12 @@ RUN python3.8 -m pip install torch torchvision torchaudio pyyaml humanfriendly t
 WORKDIR /
 
 RUN apt-get install -y --no-install-recommends libcairo2 texlive-xetex texlive-fonts-recommended texlive-plain-generic
+
 #QUANTUM
+#RUN apt-get install -y apt-transport-https curl gnupg \
+#RUN wget https://github.com/bazelbuild/bazel/releases/download/3.7.2/bazel-3.7.2-linux-arm64 && chmod +x ./bazel-3.7.2-linux-arm64
+#RUN cp ./bazel-3.7.2-linux-arm64 /usr/local/bin/bazel
+#WORKDIR /
 # A fix for OSX m1 chip
 #RUN python3 -m pip download paddlepaddle==2.3.2 -f https://www.paddlepaddle.org.cn/whl/linux/openblas/avx/stable.html --no-index --no-deps
 RUN python3.8 -m pip install -U qiskit cirq qibo git+https://github.com/aspuru-guzik-group/tequila.git azure-quantum[qiskit]

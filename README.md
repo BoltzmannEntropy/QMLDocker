@@ -30,6 +30,7 @@ I encountered challenges when trying to install the deep learning libraries Qisk
 
  - Based on nvcr.io/nvidia/pytorch:21.07-py3
  - PyTorch 
+ - Full LaTeX support 
  - Qiskit
  - Cirq 
  - Paddlepaddle
@@ -102,6 +103,26 @@ NOTE: The SHMEM allocation limit is set to the default of 64MB.  This may be
 To run a command as administrator (user "root"), use "sudo <command>".
 See "man sudo_root" for details.
 ```
+
+## Mapping volumes
+The `run.sh` command, maps an external volume to docker as in: `-v /Users/sol/dev/:/home/qmuser/sharedfolder`. You can change that to fit your OS.  
+## Jupyter
+Once you are logged in, run the following command. Jupyter will be available at http://localhost:8097/
+```python
+qmuser@442b8ee86057:~$ ./run_jupyter.sh
+Detected 5 cpus
+/usr/local/nvm/versions/node/v15.12.0/bin:/opt/conda/bin:/opt/cmake-3.14.6-Linux-x86_64/bin/:/usr/local/mpi/bin:/usr/local/nvidia/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/ucx/bin:/opt/tensorrt/bin
+qmuser@442b8ee86057:~$ sshd: no hostkeys available -- exiting.
+[I 19:45:11.140 NotebookApp] Writing notebook server cookie secret to /home/qmuser/.local/share/jupyter/runtime/notebook_cookie_secret
+[I 19:45:13.719 NotebookApp] jupyter_tensorboard extension loaded.
+[I 19:45:15.250 NotebookApp] JupyterLab extension loaded from /opt/conda/lib/python3.8/site-packages/jupyterlab
+[I 19:45:15.250 NotebookApp] JupyterLab application directory is /opt/conda/share/jupyter/lab
+[I 19:45:15.260 NotebookApp] [Jupytext Server Extension] NotebookApp.contents_manager_class is (a subclass of) jupytext.TextFileContentsManager already - OK
+[I 19:45:15.260 NotebookApp] Serving notebooks from local directory: /home/qmuser
+[I 19:45:15.260 NotebookApp] Jupyter Notebook 6.2.0 is running at:
+
+```
+
 
 ## Troubleshooting
 ```
