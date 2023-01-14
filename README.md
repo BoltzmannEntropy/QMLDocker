@@ -123,6 +123,12 @@ qmuser@442b8ee86057:~$ sshd: no hostkeys available -- exiting.
 
 ```
 
+## Testing 
+Try https://github.com/PaddlePaddle/Quantum/blob/master/tutorials/machine_learning/QClassifier_EN.ipynb 
+
+<h1 align="center">    
+  <img src="https://github.com/BoltzmannEntropy/QMLDocker/blob/main/resources/.png?raw=true" width="30%"></a>  
+</h1>
 
 ## Troubleshooting
 ```
