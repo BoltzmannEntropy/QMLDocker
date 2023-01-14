@@ -11,7 +11,7 @@
 </p>
 
 <h1 align="center">    
-  <img src="https://github.com/BoltzmannEntropy/QMLDocker/blob/master/resources/HXH.png?raw=true" width="80%"></a>  
+  <img src="https://github.com/BoltzmannEntropy/QMLDocker/blob/main/resources/HXH.png?raw=true" width="80%"></a>  
 </h1>
 ---
 
@@ -34,7 +34,7 @@ I encountered challenges when trying to install the deep learning library paddle
 # Quantum computing libraries
 
 <h1 align="center">    
-  <img src="https://github.com/BoltzmannEntropy/QMLDocker/blob/master/resources/logo.png?raw=true" width="80%"></a>  
+  <img src="https://github.com/BoltzmannEntropy/QMLDocker/blob/main/resources/logo.png?raw=true" width="40%"></a>  
 </h1>
  <div align='center'>
  <table>
