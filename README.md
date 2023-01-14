@@ -28,14 +28,16 @@ I encountered challenges when trying to install the deep learning libraries Qisk
   <img src="https://github.com/BoltzmannEntropy/QMLDocker/blob/main/resources/logo.png?raw=true" width="30%"></a>  
 </h1>
 
+ - Based on nvcr.io/nvidia/pytorch:21.07-py3
  - PyTorch 
  - Qiskit
- - cirq 
+ - Cirq 
  - Paddlepaddle
  - Paddle-quantum 
  - A passord protected Jupyter (password is:"mk2==2km") 
- - An SSH key that is embedded into teh docker (change it of you want)
+ - An SSH key that is embedded into the docker (change it of you want to)
  - Home directory /home/qmuser 
+ - C++ compiler + CMake 
 # Building
 ```bash
 docker build -t quantdoc docker
