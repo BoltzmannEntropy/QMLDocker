@@ -1,1 +1,1 @@
-docker build -t quantdoc docker
+docker build -t quantdoc .
