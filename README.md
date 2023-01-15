@@ -22,6 +22,9 @@ The need for this container arose from my desire to have a single environment fo
 
 I encountered challenges when trying to install the deep learning libraries Qiskit, paddlepaddle and its quantum extension paddle-quantum on a Mac with the new M1 chip, but ultimately succeeded in creating an Ubuntu-based docker that works with both on the M1 chip.
 
+The docker also includes two QML repositories with numerous examples:
+ - https://github.com/theerfan/Q/tree/master/QML%20Course (A QML course in qiskit)
+ - https://github.com/PaddlePaddle/Quantum.git (A QML course in Paddle-quantum)
 
 # Quantum computing libraries, features etc 
 <h1 align="center">    
@@ -30,11 +33,14 @@ I encountered challenges when trying to install the deep learning libraries Qisk
 
  - Based on nvcr.io/nvidia/pytorch:21.07-py3
  - PyTorch 
- - Full LaTeX support 
+ - onnxruntime 
+ - Full LaTeX distribution  
  - Qiskit
  - Cirq 
  - Paddlepaddle
  - Paddle-quantum 
+ - Tequila 
+ - Qualacs 
  - A passord protected Jupyter (password is:"mk2==2km") 
  - An SSH key that is embedded into the docker (change it of you want to)
  - Home directory /home/qmuser 
@@ -44,9 +50,7 @@ I encountered challenges when trying to install the deep learning libraries Qisk
 docker build -t quantdoc docker
 ```
 
-
 # Running
-
 ```bash
 docker run  --platform linux/amd64 -it --env="DISPLAY" -p 8097:7842 -v /tmp/.X11-unix:/tmp/.X11-unix:rw -e DISPLAY -e XAUTHORITY -v /Users/sol/dev/:/home/qmuser/sharedfolder  quantdoc:latest bash
 ```
@@ -103,6 +107,8 @@ NOTE: The SHMEM allocation limit is set to the default of 64MB.  This may be
 To run a command as administrator (user "root"), use "sudo <command>".
 See "man sudo_root" for details.
 ```
+
+
 
 ## Mapping volumes
 The `run.sh` command, maps an external volume to docker as in: `-v /Users/sol/dev/:/home/qmuser/sharedfolder`. You can change that to fit your OS.  
@@ -169,11 +175,8 @@ CPU mode:
 </table>
 
 ## Examples
+See the examples in the sub-folders /home/qmluser/
 
-#### A Simple example, mainly for testing the integration. imports all the quantum libraries in Python.
-```python
-
-```
 
 ## Requirements:
 * (Optional) NVIDIA CUDA 11.2. For the GPU versions of paddle-quantum etc.   

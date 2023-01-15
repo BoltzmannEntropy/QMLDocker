@@ -136,5 +136,8 @@ RUN chown qmuser /home/qmuser/
 RUN chown -R qmuser:qmuser /home/qmuser/
 USER qmuser
 WORKDIR /home/qmuser
+RUN git clone https://github.com/PaddlePaddle/Quantum.git
+RUN git clone https://github.com/theerfan/Q/
+
 RUN ["/bin/bash"]
 EXPOSE 8097 7842
