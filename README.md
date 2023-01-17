@@ -13,6 +13,8 @@
   <img src="https://github.com/BoltzmannEntropy/QMLDocker/blob/main/resources/HXH.png?raw=true" width="30%"></a>  
 </h1>
 
+On telegram: https://t.me/BoltzmannQ 
+
 ## About
 In comparison to many specialists, I am relatively new to the field of quantum computing, having only begun my journey in 2019. 
 My interest in the subject was sparked by its potential and the difficulty in understanding it. 
