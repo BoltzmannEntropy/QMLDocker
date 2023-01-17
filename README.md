@@ -176,7 +176,12 @@ CPU mode:
 
 ## Examples
 See the examples in the sub-folders /home/qmluser/
-
+```python
+USER qmuser
+WORKDIR /home/qmuser
+RUN git clone https://github.com/PaddlePaddle/Quantum.git
+RUN git clone https://github.com/theerfan/Q/
+```
 
 ## Requirements:
 * (Optional) NVIDIA CUDA 11.2. For the GPU versions of paddle-quantum etc.   
