@@ -138,9 +138,9 @@ USER qmuser
 WORKDIR /home/qmuser
 RUN git clone https://github.com/PaddlePaddle/Quantum.git
 RUN git clone https://github.com/theerfan/Q/
-RUN git https://github.com/DavitKhach/quantum-algorithms-tutorials.git
-RUN git https://github.com/mit-han-lab/torchquantum.git
-RUN git https://github.com/walid-mk/VQE.git
+RUN git clone https://github.com/DavitKhach/quantum-algorithms-tutorials.git
+RUN git clone https://github.com/mit-han-lab/torchquantum.git
+RUN git clone https://github.com/walid-mk/VQE.git
 
 RUN ["/bin/bash"]
 EXPOSE 8097 7842
