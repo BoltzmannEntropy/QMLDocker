@@ -16,18 +16,21 @@
 On telegram: https://t.me/BoltzmannQ 
 
 ## About
-In comparison to many specialists, I am relatively new to the field of quantum computing, having only begun my journey in 2019. 
-My interest in the subject was sparked by its potential and the difficulty in understanding it. 
-I was also frustrated by the amount of misinformation being reported in the media about vendor announcements. 
-To gain a deeper understanding of the field, I decided to enroll in a graduate program (JHU) where I would combine my knowledge of AI with applied physics, quantum mechanics, and quantum computing. 
-The need for this container arose from my desire to have a single environment for my QML work on all platforms. 
+My curiosity in quantum computing was ignited by its capabilities and the complexity of understanding it, 
+and I was disappointed by the amount of inaccurate information being reported in the media about vendor announcements. 
+To gain a more comprehensive understanding of the field, I enrolled in a graduate program (JHU) where I could combine 
+my knowledge of AI with applied physics, quantum mechanics, and quantum computing. I wanted to create a single environment
+for my QML work on all platforms, which is why I needed this container. I faced challenges when trying to install the deep 
+learning libraries Qiskit and paddle-quantum on a Mac with the new M1 chip, but eventually succeeded in creating an 
+Ubuntu-based docker that works with both on the M1 chip. 
 
-I encountered challenges when trying to install the deep learning libraries Qiskit, paddlepaddle and its quantum extension paddle-quantum on a Mac with the new M1 chip, but ultimately succeeded in creating an Ubuntu-based docker that works with both on the M1 chip.
-
-The docker also includes two QML repositories with numerous examples:
+The docker also includes two QML repositories with many examples:
  - https://github.com/theerfan/Q/tree/master/QML%20Course (A QML course in qiskit)
  - https://github.com/PaddlePaddle/Quantum.git (A QML course in Paddle-quantum)
-
+ - https://github.com/DavitKhach/quantum-algorithms-tutorials.git
+ - https://github.com/mit-han-lab/torchquantum.git
+ - https://github.com/walid-mk/VQE.git 
+ - 
 # Quantum computing libraries, features etc 
 <h1 align="center">    
   <img src="https://github.com/BoltzmannEntropy/QMLDocker/blob/main/resources/logo.png?raw=true" width="30%"></a>  
@@ -35,14 +38,18 @@ The docker also includes two QML repositories with numerous examples:
 
  - Based on nvcr.io/nvidia/pytorch:21.07-py3
  - PyTorch 
- - onnxruntime 
- - Full LaTeX distribution  
+ - PyTorchQuantum 
+ - PennyLane 
+ - Eigen3
+ - Quantum++ and PyQPP
  - Qiskit
  - Cirq 
  - Paddlepaddle
  - Paddle-quantum 
  - Tequila 
- - Qualacs 
+ - Qualacs
+ - onnxruntime
+ - Full LaTeX distribution
  - A passord protected Jupyter (password is:"mk2==2km") 
  - An SSH key that is embedded into the docker (change it of you want to)
  - Home directory /home/qmuser 

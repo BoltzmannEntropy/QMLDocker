@@ -91,7 +91,7 @@ RUN pip install -U scikit-image onnxruntime librosa
 RUN python3.8 -m pip install torch torchvision torchaudio pyyaml humanfriendly torch-complex tqdm webrtcvad
 WORKDIR /
 
-RUN apt-get install -y --no-install-recommends libcairo2 texlive-xetex texlive-fonts-recommended texlive-plain-generic
+RUN apt-get install -y --no-install-recommends libcairo2 texlive-xetex texlive-fonts-recommended texlive-plain-generic libeigen3-dev
 
 RUN apt-get update \
     && apt-get install -y openssh-server xauth \
@@ -121,7 +121,7 @@ RUN echo "export PATH=$PATH" >> /etc/profile && \
 #WORKDIR /
 # A fix for OSX m1 chip
 #RUN python3 -m pip download paddlepaddle==2.3.2 -f https://www.paddlepaddle.org.cn/whl/linux/openblas/avx/stable.html --no-index --no-deps
-RUN python3.8 -m pip install -U qiskit cirq qibo git+https://github.com/aspuru-guzik-group/tequila.git azure-quantum[qiskit]
+RUN python3.8 -m pip install -U qiskit cirq qibo git+https://github.com/aspuru-guzik-group/tequila.git azure-quantum[qiskit] pennylane git+https://github.com/softwareQinc/qpp
 # see python -m pip install paddlepaddle==2.4.1 -i https://pypi.tuna.tsinghua.edu.cn/simple
 # see https://stackoverflow.com/questions/74319979/how-to-install-paddlepaddle-with-no-avx-core
 RUN python3.8 -m pip download paddlepaddle==2.3.0 -f https://www.paddlepaddle.org.cn/whl/linux/mkl/noavx/stable.html --no-index --no-deps
@@ -138,6 +138,9 @@ USER qmuser
 WORKDIR /home/qmuser
 RUN git clone https://github.com/PaddlePaddle/Quantum.git
 RUN git clone https://github.com/theerfan/Q/
+RUN git https://github.com/DavitKhach/quantum-algorithms-tutorials.git
+RUN git https://github.com/mit-han-lab/torchquantum.git
+RUN git https://github.com/walid-mk/VQE.git
 
 RUN ["/bin/bash"]
 EXPOSE 8097 7842
