@@ -24,7 +24,7 @@ for my QML work on all platforms, which is why I needed this container. I faced 
 learning libraries Qiskit and paddle-quantum on a Mac with the new M1 chip, but eventually succeeded in creating an 
 Ubuntu-based docker that works with both on the M1 chip. 
 
-The docker also includes two QML repositories with many examples:
+The docker also includes several QML repositories with numerous examples:
  - https://github.com/theerfan/Q/tree/master/QML%20Course (A QML course in qiskit)
  - https://github.com/PaddlePaddle/Quantum.git (A QML course in Paddle-quantum)
  - https://github.com/DavitKhach/quantum-algorithms-tutorials.git
