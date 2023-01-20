@@ -30,6 +30,7 @@ The docker also includes several QML repositories with numerous examples:
  - https://github.com/DavitKhach/quantum-algorithms-tutorials.git
  - https://github.com/mit-han-lab/torchquantum.git
  - https://github.com/walid-mk/VQE.git 
+ - https://github.com/MyEntangled/Quantum-Autoencoders.git
  - 
 # Quantum computing libraries, features etc 
 <h1 align="center">    

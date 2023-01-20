@@ -114,6 +114,10 @@ RUN echo 'ldconfig'  >> /root/.bashrc
 RUN echo "export PATH=$PATH" >> /etc/profile && \
     echo "ldconfig" >> /etc/profile
 
+
+RUN apt-get install -y libx11-dev ffmpeg libsm6 libxext6 libgl1 python3-opencv
+RUN python3.8 -m pip install opencv-python opencv-contrib-python==4.5.5.62 pillow==9.1.0 celluloid
+
 #QUANTUM
 #RUN apt-get install -y apt-transport-https curl gnupg \
 #RUN wget https://github.com/bazelbuild/bazel/releases/download/3.7.2/bazel-3.7.2-linux-arm64 && chmod +x ./bazel-3.7.2-linux-arm64
@@ -121,6 +125,7 @@ RUN echo "export PATH=$PATH" >> /etc/profile && \
 #WORKDIR /
 # A fix for OSX m1 chip
 #RUN python3 -m pip download paddlepaddle==2.3.2 -f https://www.paddlepaddle.org.cn/whl/linux/openblas/avx/stable.html --no-index --no-deps
+
 RUN python3.8 -m pip install -U qiskit cirq qibo git+https://github.com/aspuru-guzik-group/tequila.git azure-quantum[qiskit] pennylane git+https://github.com/softwareQinc/qpp
 # see python -m pip install paddlepaddle==2.4.1 -i https://pypi.tuna.tsinghua.edu.cn/simple
 # see https://stackoverflow.com/questions/74319979/how-to-install-paddlepaddle-with-no-avx-core
@@ -128,8 +133,6 @@ RUN python3.8 -m pip download paddlepaddle==2.3.0 -f https://www.paddlepaddle.or
 RUN python3.8 -m pip install paddlepaddle-2.3.0-cp38-cp38-linux_x86_64.whl paddle-quantum==2.2.2
 #RUN python3.8 -m pip install "opencv-python-headless<4.3"
 
-RUN apt-get install -y libx11-dev ffmpeg libsm6 libxext6 libgl1 python3-opencv
-RUN python3.8 -m pip install opencv-python opencv-contrib-python==4.5.5.62 pillow==9.1.0 celluloid
 
 USER root
 RUN chown qmuser /home/qmuser/
@@ -141,6 +144,6 @@ RUN git clone https://github.com/theerfan/Q/
 RUN git clone https://github.com/DavitKhach/quantum-algorithms-tutorials.git
 RUN git clone https://github.com/mit-han-lab/torchquantum.git
 RUN git clone https://github.com/walid-mk/VQE.git
-
+RUN git clone https://github.com/MyEntangled/Quantum-Autoencoders.git
 RUN ["/bin/bash"]
 EXPOSE 8097 7842
