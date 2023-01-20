@@ -34,7 +34,7 @@ The docker also includes several QML repositories with numerous examples:
  - 
 # Quantum computing libraries, features etc 
 <h1 align="center">    
-  <img src="https://github.com/BoltzmannEntropy/QMLDocker/blob/main/resources/logo.png?raw=true" width="30%"></a>  
+  <img src="https://github.com/BoltzmannEntropy/QMLDocker/blob/main/resources/libs.png?raw=true" width="40%"></a>  
 </h1>
 
  - Based on nvcr.io/nvidia/pytorch:21.07-py3
@@ -56,6 +56,9 @@ The docker also includes several QML repositories with numerous examples:
  - Home directory /home/qmuser 
  - C++ compiler + CMake 
 # Building
+<h1 align="center">    
+  <img src="https://github.com/BoltzmannEntropy/QMLDocker/blob/main/resources/logo.png?raw=true" width="30%"></a>  
+</h1>
 ```bash
 docker build -t quantdoc docker
 ```
