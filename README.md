@@ -59,8 +59,10 @@ The docker also includes several QML repositories with numerous examples:
 <h1 align="center">    
   <img src="https://github.com/BoltzmannEntropy/QMLDocker/blob/main/resources/logo.png?raw=true" width="30%"></a>  
 </h1>
+Run the `build.sh` or direct type the command
+
 ```bash
-docker build -t quantdoc docker
+docker build -t quantdoc .
 ```
 
 # Running
@@ -166,7 +168,7 @@ docker() {
 }
 ``` 
 
---platform linux/amd64
+`--platform linux/amd64`
 
 
 # GPU or CPU?  
@@ -189,7 +191,7 @@ CPU mode:
 
 ## Examples
 See the examples in the sub-folders /home/qmluser/
-```python
+```docker
 USER qmuser
 WORKDIR /home/qmuser
 RUN git clone https://github.com/PaddlePaddle/Quantum.git
