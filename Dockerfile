@@ -131,7 +131,7 @@ RUN python3.8 -m pip install -U qiskit cirq qibo git+https://github.com/aspuru-g
 # see https://stackoverflow.com/questions/74319979/how-to-install-paddlepaddle-with-no-avx-core
 RUN python3.8 -m pip download paddlepaddle==2.3.0 -f https://www.paddlepaddle.org.cn/whl/linux/mkl/noavx/stable.html --no-index --no-deps
 RUN python3.8 -m pip install paddlepaddle-2.3.0-cp38-cp38-linux_x86_64.whl paddle-quantum==2.2.2
-#RUN python3.8 -m pip install "opencv-python-headless<4.3"
+RUN python3.8 -m pip install qutip
 
 
 USER root
