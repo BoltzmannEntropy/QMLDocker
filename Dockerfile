@@ -131,7 +131,7 @@ RUN python3.8 -m pip install -U qiskit cirq qibo git+https://github.com/aspuru-g
 # see https://stackoverflow.com/questions/74319979/how-to-install-paddlepaddle-with-no-avx-core
 RUN python3.8 -m pip download paddlepaddle==2.3.0 -f https://www.paddlepaddle.org.cn/whl/linux/mkl/noavx/stable.html --no-index --no-deps
 RUN python3.8 -m pip install paddlepaddle-2.3.0-cp38-cp38-linux_x86_64.whl paddle-quantum==2.2.2
-RUN python3.8 -m pip install qutip
+RUN python3.8 -m pip install qutip pyquil dwave_networkx minorminer
 
 
 USER root
@@ -145,5 +145,16 @@ RUN git clone https://github.com/DavitKhach/quantum-algorithms-tutorials.git
 RUN git clone https://github.com/mit-han-lab/torchquantum.git
 RUN git clone https://github.com/walid-mk/VQE.git
 RUN git clone https://github.com/MyEntangled/Quantum-Autoencoders.git
+
+#RUN git clone https://github.com/google/jax
+#USER root
+#RUN apt-get install -y apt-transport-https curl gnupg
+#RUN wget https://github.com/bazelbuild/bazel/releases/download/3.7.2/bazel-3.7.2-linux-arm64 && chmod +x ./bazel-3.7.2-linux-arm64
+#RUN cp ./bazel-3.7.2-linux-arm64 /usr/local/bin/bazel && chmod +x /usr/local/bin/bazel
+#RUN ls -la /usr/local/bin/bazel
+USER qmuser
+#RUN python3.8 /home/qmuser/jax/build/build.py
+
+WORKDIR /home/qmuser
 RUN ["/bin/bash"]
 EXPOSE 8097 7842
