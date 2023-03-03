@@ -16,13 +16,9 @@
 On telegram: https://t.me/BoltzmannQ 
 
 ## About
-My curiosity in quantum computing was ignited by its capabilities and the complexity of understanding it, 
-and I was disappointed by the amount of inaccurate information being reported in the media about vendor announcements. 
-To gain a more comprehensive understanding of the field, I enrolled in a graduate program (JHU) where I could combine 
-my knowledge of AI with applied physics, quantum mechanics, and quantum computing. I wanted to create a single environment
-for my QML work on all platforms, which is why I needed this container. I faced challenges when trying to install the deep 
-learning libraries Qiskit and paddle-quantum on a Mac with the new M1 chip, but eventually succeeded in creating an 
-Ubuntu-based docker that works with both on the M1 chip. 
+I developed a docker container that provides a unified environment for my QML projects, catering to both academic and industrial use cases across different platforms. Although I encountered difficulties installing Qiskit and paddle-quantum on a Mac OSX with the latest M1 chip, I eventually overcame this challenge by creating an Ubuntu-based docker that supports both libraries on the M1 chip.
+
+The primary audience for this container is students and researchers who are new to quantum computing. 
 
 The docker also includes several QML repositories with numerous examples:
  - https://github.com/theerfan/Q/tree/master/QML%20Course (A QML course in qiskit)
