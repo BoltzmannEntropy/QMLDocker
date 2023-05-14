@@ -132,15 +132,18 @@ RUN git clone https://github.com/DavitKhach/quantum-algorithms-tutorials.git
 RUN git clone https://github.com/mit-han-lab/torchquantum.git
 RUN git clone https://github.com/walid-mk/VQE.git
 RUN git clone https://github.com/MyEntangled/Quantum-Autoencoders.git
+RUN git clone https://github.com/PennyLaneAI/qml.git
+RUN git clone https://github.com/XanaduAI/pennylane-demo-cern.git
 
 #RUN #python3.8 -m pip install paddlepaddle-gpu==2.3.2 -f https://paddlepaddle.org.cn/whl/stable/noavx.html paddle-quantum==2.3.0
 #RUN python3.8 -m pip install paddlepaddle-gpu==2.3.2 -f https://www.paddlepaddle.org.cn/whl/linux/mkl/noavx/stable.html --no-index --no-deps
 #RUN python3.8 -m pip install --no-index --no-deps paddle-quantum==2.2.2
 
-#RUN python3.8 -m pip install qutip pyquil dwave_networkx minorminer docarray qiskit cirq qibo
+#RUN python3.8 -m pip install qutip pyquil dwave_networkx minorminer docarray qiskit cirq qibo qsimcirq
 
 RUN python3.8 -m pip download paddlepaddle==2.3.0 -f https://www.paddlepaddle.org.cn/whl/linux/mkl/noavx/stable.html --no-index --no-deps
-RUN python3.8 -m pip install paddlepaddle-2.3.0-cp38-cp38-linux_x86_64.whl paddle-quantum==2.2.2 numpy
+RUN python3.8 -m pip install torch torchvision torchaudio pennylane
+RUN python3.8 -m pip install paddlepaddle-2.3.0-cp38-cp38-linux_x86_64.whl paddle-quantum==2.2.2 numpy openfermion openfermionpyscf
 USER root
 RUN chown qmuser /home/qmuser/
 RUN chown -R qmuser:qmuser /home/qmuser/

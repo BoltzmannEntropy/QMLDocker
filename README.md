@@ -16,7 +16,10 @@
 On telegram: https://t.me/BoltzmannQ 
 
 ## About
-I developed a docker container that provides a unified environment for my QML projects, catering to both academic and industrial use cases across different platforms. Although I encountered difficulties installing Qiskit and paddle-quantum on a Mac OSX with the latest M1 chip, I eventually overcame this challenge by creating an Ubuntu-based docker that supports both libraries on the M1 chip.
+I developed a docker container that provides a unified environment for my QML projects, 
+catering to both academic and industrial use cases across different platforms. 
+Although I encountered difficulties installing Qiskit and paddle-quantum on a Mac OSX with the latest M1 chip, 
+I eventually overcame this challenge by creating an Ubuntu-based docker that supports both libraries on the M1 chip.
 
 The primary audience for this container is students and researchers who are new to quantum computing. 
 
@@ -27,13 +30,16 @@ The docker also includes several QML repositories with numerous examples:
  - https://github.com/mit-han-lab/torchquantum.git
  - https://github.com/walid-mk/VQE.git 
  - https://github.com/MyEntangled/Quantum-Autoencoders.git
- - 
+ - https://github.com/PennyLaneAI/qml.git
+ - https://github.com/XanaduAI/pennylane-demo-cern.git
+
 # Quantum computing libraries, features etc 
 <h1 align="center">    
   <img src="https://github.com/BoltzmannEntropy/QMLDocker/blob/main/resources/libs.png?raw=true" width="100%"></a>  
 </h1>
 
- - Based on nvcr.io/nvidia/pytorch:21.07-py3
+ - Based on nvcr.io/nvidia/tensorrt:21.07-py3
+ - PennyLane 
  - PyTorch 
  - PyTorchQuantum 
  - PennyLane 
