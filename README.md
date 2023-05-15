@@ -24,14 +24,20 @@ I eventually overcame this challenge by creating an Ubuntu-based docker that sup
 The primary audience for this container is students and researchers who are new to quantum computing. 
 
 The docker also includes several QML repositories with numerous examples:
- - https://github.com/theerfan/Q/tree/master/QML%20Course (A QML course in qiskit)
- - https://github.com/PaddlePaddle/Quantum.git (A QML course in Paddle-quantum)
- - https://github.com/DavitKhach/quantum-algorithms-tutorials.git
- - https://github.com/mit-han-lab/torchquantum.git
- - https://github.com/walid-mk/VQE.git 
- - https://github.com/MyEntangled/Quantum-Autoencoders.git
- - https://github.com/PennyLaneAI/qml.git
- - https://github.com/XanaduAI/pennylane-demo-cern.git
+-  clone https://github.com/PaddlePaddle/Quantum.git
+-  clone https://github.com/theerfan/Q/
+-  clone https://github.com/DavitKhach/quantum-algorithms-tutorials.git
+-  clone https://github.com/mit-han-lab/torchquantum.git
+-  clone https://github.com/walid-mk/VQE.git
+-  clone https://github.com/MyEntangled/Quantum-Autoencoders.git
+-  clone https://github.com/PennyLaneAI/qml.git
+-  clone https://github.com/XanaduAI/pennylane-demo-cern.git
+-  clone https://github.com/quantum-machine-learning/Hands-On-Quantum-Machine-Learning-With-Python-Vol-1
+-  clone https://github.com/MonitSharma/Learn-Quantum-Machine-Learning.git
+-  clone https://github.com/MarcinPlodzien/Quantum-Machine-Learning-Introduction.git
+
+
+
 
 # Quantum computing libraries, features etc 
 <h1 align="center">    
@@ -42,7 +48,7 @@ The docker also includes several QML repositories with numerous examples:
  - PennyLane 
  - PyTorch 
  - PyTorchQuantum 
- - PennyLane 
+ - efficientnet_pytorch, pandas_summary 
  - Eigen3
  - Quantum++ and PyQPP
  - Qiskit
